@@ -105,7 +105,7 @@ switch flag,
   % Initialization %
   %%%%%%%%%%%%%%%%%%
   case 0,
-    [sys,x0,str,ts,simStateCompliance]=mdlInitializeSizes;
+    [sys,x0,str,ts,simStateCompliance]=mdlInitializeSizes(Ts);
 
   %%%%%%%%%%%%%%%
   % Derivatives %
@@ -187,7 +187,7 @@ str = [];
 %
 % initialize the array of sample times
 %
-ts  = [0 0];
+ts  = [Ts 0];
 
 % Specify the block simStateCompliance. The allowed values are:
 %    'UnknownSimState', < The default setting; warn and assume DefaultSimState

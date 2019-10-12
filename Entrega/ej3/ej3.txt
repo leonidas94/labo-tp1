@@ -3,12 +3,21 @@ Type: Variable-step
 Solver: ode45
 Fixed-step size:1e-4
 
-*motor_sim1.png
-Ts=0.0001	Tiempo de muestreo
-ppv=20		Pulsos por vuelta
-Tw=0.01		Ancho de ventana
 
-*motor_sim2.png
-Ts=0.0001	Tiempo de muestreo
-ppv=50		Pulsos por vuelta
-Tw=0.01		Ancho de ventana
+Tw=0.01     %Ancho de Ventana
+ppv=20      %Pulsos por vuelta
+Ts=1e-4     %Tiempo de muestreo
+
+*motor_pid_sim1
+Kp=0.001;
+Kd=0.02;
+Ki=1;
+h=Tw;
+N=100;
+
+*motor_pid_sim2
+Kp=0.001;
+Kd=0.02;
+Ki=0.4;
+h=Tw;
+N=100;
