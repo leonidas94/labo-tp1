@@ -1,0 +1,16 @@
+Para obtener el modelo, se aplico el escalon de 12V en t=0s.
+Mediante apx() se obtuvo la siguiente transferencia
+
+	  0.7882 z^-1
+  -------------------------------
+  1 - 0.9917 z^-1 - 0.006202 z^-2
+
+
+
+*model_sim_plot.png
+
+Solver
+Type: Fixed-step 
+Solver: auto
+Fixed-step size:1e-4
+
