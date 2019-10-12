@@ -1,0 +1,26 @@
+Solver
+Type: Variable-step 
+Solver: ode45
+Fixed-step size:1e-4
+
+
+Tw=0.01     %Ancho de Ventana
+ppv=20      %Pulsos por vuelta
+Ts=1e-4     %Tiempo de muestreo
+
+*motor_pid_sim1
+Kp=0.001;
+Kd=0.02;
+Ki=1;
+h=Tw;
+N=100;
+
+Se ajustaron los valores del PID para evitar el sobrepico con el metodo de prueba y error,
+iterando los valores y observando las respuestas. Se grafica el valor final obtenido
+
+*motor_pid_sim2
+Kp=0.001;
+Kd=0.02;
+Ki=0.4;
+h=Tw;
+N=100;
