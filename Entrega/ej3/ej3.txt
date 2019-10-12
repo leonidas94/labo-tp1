@@ -1,6 +1,6 @@
 Solver
-Type: Fixed-step 
-Solver: auto
+Type: Variable-step 
+Solver: ode45
 Fixed-step size:1e-4
 
 *motor_sim1.png

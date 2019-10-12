@@ -2,6 +2,9 @@
 Variable-step	Ode45
 Relative Tolerance 1e-4
 
+Simulacion para un tanque
+*tanque1_sim
+Tanque1 = 0.5,10,2,5
 
 Distintas pruebas para el caso de 3 tanques
 (Parámetros: R,hmax,A,hini)
