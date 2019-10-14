@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Solver
 Type: Variable-step 
 Solver: ode45
@@ -24,3 +25,44 @@ Kd=0.02;
 Ki=0.4;
 h=Tw;
 N=100;
+=======
+Solver
+Type: Variable-step 
+Solver: ode45
+Fixed-step size:1e-4
+
+
+Tw=0.01     %Ancho de Ventana
+ppv=20      %Pulsos por vuelta
+Ts=1e-4     %Tiempo de muestreo
+
+Se definió como referecia un escalón con valor de 4200, el cuál es menor al
+máximo obtenido en el ejercicio 2. 
+
+Se eligieron valores para las constantes arbitrarios, que luego serían 
+modificados para obtener la respuesta esperada. 
+
+*motor_pid_sim1
+Kp=0.001;
+Kd=0.02;
+Ki=1;
+h=Tw;
+N=100;
+
+Se puede observar que la si bien la respuesta consigue como valor final el
+de la referencia, tiene un sobrepico no deseado. 
+
+Se ajustaron los valores del PID para evitar el sobrepico con el metodo de
+prueba y error, iterando los valores y observando las respuestas. 
+Se grafica el valor final obtenido.
+
+*motor_pid_sim2
+Kp=0.001;
+Kd=0.02;
+Ki=0.4;
+h=Tw;
+N=100;
+
+Una vez ajustados los valores, el sobrepico desaparece y el valor final de
+la respuesta del sistema se corresponde con la referencia indicada. 
+>>>>>>> 5586587c4eacf0383611df38a19eb3cd5002eaab

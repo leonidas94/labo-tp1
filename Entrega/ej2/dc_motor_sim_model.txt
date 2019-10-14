@@ -1,5 +1,6 @@
 Para obtener el modelo, se aplico el escalon de 12V en t=0s.
-Mediante apx() se obtuvo la siguiente transferencia
+Mediante arx() se obtuvo la siguiente transferencia de segundo orden,
+correspondiente a un modelo en tiempo discreto:
 
 	  0.7882 z^-1
   -------------------------------
@@ -14,3 +15,5 @@ Type: Fixed-step
 Solver: auto
 Fixed-step size:1e-4
 
+Mediante esta simulación se comprueba que el modelo obenido en forma de 
+transferencia se corresponde con lo simulado en Simulink. 
