@@ -56,3 +56,6 @@ N=100;
 Se comprobó el correcto funcionamiento del modelo hallado en el punto 2, al
 controlarlo mediante un PID. 
 >>>>>>> 5586587c4eacf0383611df38a19eb3cd5002eaab
+
+
+lalala
