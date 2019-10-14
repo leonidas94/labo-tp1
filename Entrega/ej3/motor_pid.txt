@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Solver
 Type: Variable-step 
 Solver: ode45
@@ -64,5 +63,4 @@ h=Tw;
 N=100;
 
 Una vez ajustados los valores, el sobrepico desaparece y el valor final de
-la respuesta del sistema se corresponde con la referencia indicada. 
->>>>>>> 5586587c4eacf0383611df38a19eb3cd5002eaab
+la respuesta del sistema se corresponde con la referencia indicada.

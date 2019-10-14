@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Se toman los valores de transferencia obtenidos en el punto 2,
 para controlar al sistema con el mismo PID que en motor_pid
 
@@ -54,8 +53,4 @@ h=Tw;
 N=100;
 
 Se comprobó el correcto funcionamiento del modelo hallado en el punto 2, al
-controlarlo mediante un PID. 
->>>>>>> 5586587c4eacf0383611df38a19eb3cd5002eaab
-
-
-lalala
+controlarlo mediante un PID.
