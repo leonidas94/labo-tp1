@@ -1,3 +1,5 @@
+HOLA LEOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo
+
 Se contaron la cantidad de pulsos en un intervalo de tiempo Tw 
 (Time window), teniendo en cuenta los flancos ascendentes. Una vez 
 finalizado ese tiempo, se realizó la conversión de pulsos a revoluciones 
