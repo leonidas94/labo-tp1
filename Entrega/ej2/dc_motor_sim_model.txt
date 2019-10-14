@@ -6,6 +6,8 @@ correspondiente a un modelo en tiempo discreto:
   -------------------------------
   1 - 0.9917 z^-1 - 0.006202 z^-2
 
+La anterior transferencia se hallo ejecutando primero la simulación 
+dc_motor_sim.slx y luego el archivo punto_2.m. 
 
 
 *model_sim_plot.png

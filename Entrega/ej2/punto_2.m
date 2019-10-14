@@ -1,12 +1,6 @@
 %% Punto 2
 
-% Ejecutar antes de Simulink dc_motor_sim.slx.
-
-Tw=0.01;     %Ancho de Ventana.
-ppv=20;      %Pulsos por vuelta.
-Ts=1e-4;     %Tiempo de muestreo.
-
-%%
+% Este archivo se realizó para obtener la transferencia del modelo. 
 
 % Ejecutar despues de dc_motor_sim.slx.
 % Aclaración: Para correr esta parte del código se deberá haber seteado en
