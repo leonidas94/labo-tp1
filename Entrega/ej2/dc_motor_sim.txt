@@ -1,0 +1,30 @@
+Se contaron la cantidad de pulsos en un intervalo de tiempo Tw 
+(Time window), teniendo en cuenta los flancos ascendentes. Una vez 
+finalizado ese tiempo, se realizó la conversión de pulsos a revoluciones 
+por minuto, de la siguiente forma:(60*#pulsos)/(ppv*Tw).
+
+
+**SIMULINK**
+
+Solver
+Type: Fixed-step 
+Solver: auto
+Fixed-step size:1e-4
+
+Se realizaron simulaciones con Step de 12V con step time en t=0.2s 
+y tiempo de muestreo Ts.
+
+*motor_sim1.png
+Ts=0.0001	Tiempo de muestreo
+ppv=20		Pulsos por vuelta
+Tw=0.01		Ancho de ventana
+
+*motor_sim2.png
+Ts=0.0001	Tiempo de muestreo
+ppv=50		Pulsos por vuelta
+Tw=0.01		Ancho de ventana
+
+Se puede observar que la salida de ambos sensores se corresponden y se
+puede notar el desfazaje que estas tienen. A su vez la forma de la
+respuesta obtenida se corresponde con los esperado. Al variar la cantidad
+de pulsos por vuelta se comprueba que los intervalos se modifican. 

@@ -24,3 +24,6 @@ Kd=0.02;
 Ki=0.4;
 h=Tw;
 N=100;
+
+Se comprobó el correcto funcionamiento del modelo hallado en el punto 2, al
+controlarlo mediante un PID. 
