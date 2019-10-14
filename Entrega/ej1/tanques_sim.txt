@@ -4,23 +4,17 @@ Relative Tolerance 1e-4
 
 
 Simulacion para un tanque (tanque_sim.slx)
-*tanque1_sim
-Tanque1 = 0.5,10,2,5
-
-Distintas pruebas para el caso de 3 tanques (tanque3_sim.slx)
 (Parámetros: R,hmax,A,hini)
-
-*tanque3_sim1
+*tanque1_sim.png
+Entrada: Step de valor final 1
 Tanque1 = 0.5,10,2,5
-Tanque2 = 0.75,10,2,2
-Tanque3 = 0.75,6,2,0
 
-*tanque3_sim2
-Tanque1 = 1,10,2,2
-Tanque2 = 0.5,10,2,0
-Tanque3 = 0.5,8,2,0
+*tanque1_sim2.png
+Entrada: Step de valor final 15
+Tanque1 = 0.5,10,3,1
 
-*tanque3_sim3
-Tanque1 = 0.2,10,2,0
-Tanque2 = 0.5,10,2,5
-Tanque3 = 0.3,4,2,4
+*tanque1_sim3.png
+Entrada: Step de valor final 0
+Tanque1 = 0.5,10,3,1
+
+
