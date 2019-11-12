@@ -25,6 +25,6 @@ legend('Simulink', 'Modelo','location','southeast');
 
 
 tf(sys) % Separo transferencia en num y den para utilizar transferencia en Simulink.
-[num,den]=tfdata(sys) % Obtengo numerador y denominador de la función transferencia.
+[num,den]=tfdata(tf1) % Obtengo numerador y denominador de la función transferencia.
 num=num{1};
 den=den{1};

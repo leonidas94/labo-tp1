@@ -1,4 +1,4 @@
-function [sys,x0,str,ts,simStateCompliance] = sfunej7(t,x,u,flag,Kp,Kd,Ki,h,N)
+function [sys,x0,str,ts,simStateCompliance] = pid_sfunc(t,x,u,flag,Kp,Kd,Ki,N,h)
 %SFUNTMPL General MATLAB S-Function Template
 %   With MATLAB S-functions, you can define you own ordinary differential
 %   equations (ODEs), discrete system equations, and/or just about
@@ -11,7 +11,7 @@ function [sys,x0,str,ts,simStateCompliance] = sfunej7(t,x,u,flag,Kp,Kd,Ki,h,N)
 %   value of the FLAG, the current state vector, X, and the current
 %   input vector, U.
 %
-%   FLAG   RESULT             DESCRIPTION
+%  FLAG   RESULT             DESCRIPTION
 %   -----  ------             --------------------------------------------
 %   0      [SIZES,X0,STR,TS]  Initialization, return system sizes in SYS,
 %                             initial state in X0, state ordering strings
@@ -105,7 +105,7 @@ switch flag,
   % Initialization %
   %%%%%%%%%%%%%%%%%%
   case 0,
-    [sys,x0,str,ts,simStateCompliance]=mdlInitializeSizes;
+    [sys,x0,str,ts,simStateCompliance]=mdlInitializeSizes(h);
 
   %%%%%%%%%%%%%%%
   % Derivatives %
@@ -153,7 +153,7 @@ end
 % Return the sizes, initial conditions, and sample times for the S-function.
 %=============================================================================
 %
-function [sys,x0,str,ts,simStateCompliance]=mdlInitializeSizes
+function [sys,x0,str,ts,simStateCompliance]=mdlInitializeSizes(h)
 
 %
 % call simsizes for a sizes structure, fill it in and convert it to a
@@ -187,7 +187,7 @@ str = [];
 %
 % initialize the array of sample times
 %
-ts  = [0 0];
+ts  = [h 0];
 
 % Specify the block simStateCompliance. The allowed values are:
 %    'UnknownSimState', < The default setting; warn and assume DefaultSimState
@@ -222,8 +222,11 @@ function sys=mdlUpdate(t,x,u,Kp,Kd,Ki,h,N)
 gamma=Kd/N;
 A=[1 0 0; 0 gamma/(gamma+h) (Kp*Kd)/(gamma+h); 0 0 0];
 B=[h*Kp*Ki -h*Kp*Ki; 0 -Kp*Kd/(gamma+h); 0 1];
+%A=[1 0 ; 0 gamma/(gamma+h)];
+%B=[h*Kp*Ki -h*Kp*Ki; 0 -Kp*Kd/(gamma+h)*(1-gamma/(gamma+h))];
 
 sys = [A*x+B*u];
+%sys = [1 0 ; 0  gamma/(gamma+h)]*x+[Ki*Kp*h -Ki*Kp*h; 0 Kp*Kd/(gamma+h)*(1- gamma/(gamma +h))]*u;
 
 % end mdlUpdate
 
@@ -239,9 +242,11 @@ gamma=Kd/N;
 
 C=[1 gamma/(gamma+h) Kp*Kd/(gamma+h)];
 D=[Kp (-Kp-(Kp*Kd/(gamma+h)))];
+%C=[1 1];
+%D=[Kp -Kp-Kp*Kd/(gamma+h)];
 
 sys = [C*x+D*u];
-
+%sys = [1 1]*x + [Kp -Kp-Kp*Kd/(gamma+h)]*u;
 % end mdlOutputs
 
 %
