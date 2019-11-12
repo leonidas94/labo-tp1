@@ -7,7 +7,7 @@
 % dc_motor_sim.slx que el escalón empiece en t=0s. 
 
 order=[2,1,1];
-data=iddata(out.Data,in.Data,Ts); % Exporto los datos del Simulink.
+data=iddata(out.Data,in.Data,Tw); % Exporto los datos del Simulink.
 sys=arx(data,order);
 
 step12=stepDataOptions('StepAmplitude',12); % Defino un escalón de 12V.
