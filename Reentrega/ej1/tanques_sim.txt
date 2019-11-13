@@ -1,0 +1,20 @@
+*Solver
+Variable-step	Ode45
+Relative Tolerance 1e-4
+
+
+Simulacion para un tanque (tanque_sim.slx)
+(Parámetros: R,hmax,A,hini)
+*tanque1_sim.png
+Entrada: Step de valor final 1
+Tanque1 = 0.5,10,2,5
+
+*tanque1_sim2.png
+Entrada: Step de valor final 15
+Tanque1 = 0.5,10,3,1
+
+*tanque1_sim3.png
+Entrada: Step de valor final 0
+Tanque1 = 0.5,10,3,1
+
+

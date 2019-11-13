@@ -1,0 +1,26 @@
+Se toman los valores de transferencia obtenidos en el punto 2,
+para controlar al sistema con el mismo PID que en motor_pid
+
+num = [54.16 0];
+den = [1 -1.358 0.5076];
+
+
+**SIMULINK
+
+Solver
+Type: Variable-step 
+Solver: ode45
+Fixed-step size:1e-4
+
+
+Tw=0.02     %Ancho de Ventana
+ppv=20      %Pulsos por vuelta
+Ts=1e-4     %Tiempo de muestreo
+
+*motor_pid_sim_model.png
+
+Kp=0.002;
+Kd=0.0009;
+Ki=20;
+h=Tw;
+N=100;

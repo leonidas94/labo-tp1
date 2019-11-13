@@ -1,0 +1,21 @@
+Para obtener el modelo, se aplico el escalon de 12V en t=0s.
+Mediante la aplicación System Identification se obtuvo la siguiente transferencia de segundo orden,
+correspondiente a un modelo en tiempo discreto:
+
+	  54,16 z^-1
+  -------------------------------
+  1 - 1,358 z^-1 - 0,5076 z^-2
+
+La anterior transferencia se hallo ejecutando primero la simulación 
+dc_motor_sim.slx y luego desde matlab se utilizó la aplicación mencionada. 
+
+
+*model_sim_plot.png
+
+Solver
+Type: Fixed-step 
+Solver: auto
+Fixed-step size:1e-4
+
+Mediante esta simulación se comprueba que el modelo obenido en forma de 
+transferencia se corresponde con lo simulado en Simulink. 
